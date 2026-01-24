@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <div className="bg-slate-800 flex flex-col md:flex-row  justify-around items-center min-h-[80vh] px-10">
         <motion.img
           initial={{ opacity: 0, scale: 0.5 }} // Starts small and invisible
