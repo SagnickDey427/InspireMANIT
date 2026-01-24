@@ -1,6 +1,15 @@
 const express = require("express");
 const app = express();
 const port = 8080;
+const cors = require('cors');
+
+const corsOptions = {
+    origin : ["http://localhost:5173/"]
+}
+
+app.use(cors(corsOptions));
+
+
 
 //Home route
 app.get("/",(req,res)=>{
