@@ -13,9 +13,14 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import InspireImg from "../../assets/InspireLogo.jpg";
+import { Link } from "react-router-dom";
 
-
-const pages = ["Home", "Gallery", "Our members", "Contact us"];
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Our Members", path: "/members" },
+  { name: "Contact Us", path: "/contact" },
+];
 const settings = ["Profile", "Account", "Logout"];
 
 function Navbar() {
@@ -40,7 +45,11 @@ function Navbar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "oklch(27.9% 0.041 260.031)", boxShadow: "none", color: "#fff" }}
+      sx={{
+        backgroundColor: "oklch(27.9% 0.041 260.031)",
+        boxShadow: "none",
+        color: "#fff",
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -100,15 +109,16 @@ function Navbar() {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: "block", md: "none" } }}
             >
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  // CHANGED: color to 'inherit' so it follows the AppBar's black color
-                  sx={{ my: 2, color: "inherit", display: "block" }}
-                >
-                  {page}
-                </Button>
+              {navItems.map((page) => (
+                <Link key={page.name} to={`${page.path}`}>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    // CHANGED: color to 'inherit' so it follows the AppBar's black color
+                    sx={{ my: 2, color: "inherit", display: "block" }}
+                  >
+                    {page.name}
+                  </Button>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -125,7 +135,6 @@ function Navbar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
@@ -141,14 +150,16 @@ function Navbar() {
             INSPIRE
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#fff", display: "block" }}
-              >
-                {page}
-              </Button>
+            {navItems.map((page) => (
+              <Link to={`${page.path}`}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "#fff", display: "block" }}
+                >
+                  {page.name}
+                </Button>
+              </Link>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>

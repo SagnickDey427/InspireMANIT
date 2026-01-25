@@ -5,11 +5,13 @@ import App from './App.jsx'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout/Layout.jsx'
 import Home from './components/Home/Home'
+import Gallery from './components/Gallery/Gallery.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
-      <Route path='inspire' element={<Home/>}/>
+      <Route path='' element={<Home/>}/>
+      <Route path='gallery' element={<Gallery/>}/>
     </Route>
   )
 )
