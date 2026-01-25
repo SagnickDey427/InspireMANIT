@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-y">
+    <footer className="bg-slate-900 border-y">
       <div className="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -13,7 +13,6 @@ export default function Footer() {
               <Typography
                 variant="h6"
                 noWrap
-                component="a"
                 href="#app-bar-with-responsive-menu"
                 sx={{
                   mr: 2,
@@ -21,7 +20,7 @@ export default function Footer() {
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: ".3rem",
-                  color: "inherit",
+                  color: "#fff",
                   textDecoration: "none",
                 }}
               >
@@ -91,9 +90,9 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
-            © 2023
+            © 2026
             <a href="https://hiteshchoudhary.com/" className="hover:underline">
-              hiteshchoudhary
+              inspiremanit
             </a>
             . All Rights Reserved.
           </span>
