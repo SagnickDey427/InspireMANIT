@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import EventCard from './EventCard'; // Importing your modular component
+import { useTheme } from "@emotion/react";
 
 const UPCOMING_DATA = [
   {
@@ -18,13 +19,14 @@ const UPCOMING_DATA = [
 ];
 
 const UpcomingEvents = () => {
+  const theme = useTheme();
   return (
-    <Box component="section" sx={{ py: 10, backgroundColor: '#f9f9f9' }}>
+    <Box component="section" sx={{ py: 10, backgroundImage: `radial-gradient(at 0% 0%, ${theme.palette.primary.main}10 0, transparent 50%)` }}>
       <Container>
         <Typography 
           variant="h3" 
           align="center" 
-          sx={{ fontWeight: 800, mb: 2, color: '#1a1a1a' }}
+          sx={{ fontWeight: 800, mb: 2, color: '#fff' }}
         >
           What's Happening
         </Typography>

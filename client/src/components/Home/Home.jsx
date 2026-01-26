@@ -5,14 +5,15 @@ import UpcomingEvents from "./UpcomingEvent.jsx";
 import Testimonials from "./Testimonial.jsx";
 import MeetTheTeam from "./Meet the Team/MeetTheTeam.jsx";
 
+
 export default function Home() {
   return (
     <div>
-      <HeroSection/>
-      <AboutSection/>
-      <UpcomingEvents/>
-      <Testimonials/>
-      <MeetTheTeam/>
+      <HeroSection />
+      <AboutSection />
+      <UpcomingEvents />
+      <Testimonials />
+      <MeetTheTeam />
     </div>
   );
 }

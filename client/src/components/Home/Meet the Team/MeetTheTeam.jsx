@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography, Grid, useTheme } from '@mui/material';
 import TeamMemberCard from './TeamMemberCard';
 
 const TEAM_DATA = [
@@ -30,8 +30,9 @@ const TEAM_DATA = [
 ];
 
 const MeetTheTeam = () => {
+  const theme = useTheme();
   return (
-    <Box component="section" sx={{ py: 12, backgroundColor: '#ffffff' }}>
+    <Box component="section" sx={{ py: 12, backgroundImage: `radial-gradient(at 0% 0%, ${theme.palette.primary.main}10 0, transparent 50%)` }}>
       <Container>
         <Typography variant="h3" align="center" sx={{ fontWeight: 900, mb: 2 }}>
           Meet the Core
