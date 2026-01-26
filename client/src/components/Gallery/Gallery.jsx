@@ -4,8 +4,19 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { useMediaQuery, useTheme, Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Gallery() {
+  const [imageData,setImageData] = useState([]);
+  useEffect(()=>{
+    const getData = async ()=>{
+      const data = await fetch('http://localhost:8080/gallery');
+      const jsonData = await data.json();
+      setImageData(jsonData);
+    }
+    getData();
+  },[])
   const theme = useTheme();
 
   // This returns true if the screen is smaller than 600px (MUI's 'sm' breakpoint)
@@ -80,14 +91,14 @@ export default function Gallery() {
       </Typography>
 
       <ImageList variant="masonry" cols={isMobile ? 1 : 3} gap={16}>
-        {itemData.map((item, index) => (
-          <ImageListItem className="hover:scale-105 " key={item.img}>
+        {imageData.map((item, index) => (
+          <ImageListItem className="hover:scale-105 " key={item._id}>
             <motion.img
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }} // Staggered entrance
               viewport={{ once: true }}
-              src={`${item.img}?w=500&auto=format`}
+              src={`${item.url}?w=500&auto=format`}
               alt={item.title}
               loading="lazy"
               style={{
