@@ -2,11 +2,19 @@
 import InspireImg from "../../assets/InspireLogo.jpg";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
+import { useTheme } from "@emotion/react";
+import Box from '@mui/material/Box';
 
-export default function HeroSection(){
-    return (
-        <>
-        <div className="bg-slate-800 flex flex-col md:flex-row  justify-around items-center min-h-[80vh] px-10">
+export default function HeroSection() {
+  const theme = useTheme();
+  return (
+    <Box
+      sx={{
+        py: 10,
+        backgroundImage: `radial-gradient(at 0% 0%, ${theme.palette.primary.main}10 0, transparent 50%)`,
+      }}
+    >
+      <div className="flex flex-col md:flex-row  justify-around items-center min-h-[80vh] px-10">
         <motion.img
           initial={{ opacity: 0, scale: 0.5 }} // Starts small and invisible
           animate={{ opacity: 1, scale: 1 }} // Pops up to full size
@@ -34,6 +42,6 @@ export default function HeroSection(){
           </p>
         </motion.div>
       </div>
-        </>
-    )
+    </Box>
+  );
 }

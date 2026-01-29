@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import TestimonialCard from './TestimonialCard';
+import { useTheme } from "@emotion/react";
 
 const TESTIMONIALS_DATA = [
   {
@@ -26,8 +27,9 @@ const TESTIMONIALS_DATA = [
 ];
 
 const Testimonials = () => {
+  const theme = useTheme();
   return (
-    <Box component="section" sx={{ py: 10, backgroundColor: '#f8fafc' }}>
+    <Box component="section" sx={{ py: 10, backgroundImage: `radial-gradient(at 0% 0%, ${theme.palette.primary.main}10 0, transparent 50%)` }}>
       <Container>
         <Typography variant="overline" display="block" align="center" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', letterSpacing: 2 }}>
           Community Voice

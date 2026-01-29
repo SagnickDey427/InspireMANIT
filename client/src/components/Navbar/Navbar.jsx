@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import InspireImg from "../../assets/InspireLogo.jpg";
 import { Link } from "react-router-dom";
+import { useTheme } from "@emotion/react";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -24,6 +25,7 @@ const navItems = [
 const settings = ["Profile", "Account", "Logout"];
 
 function Navbar() {
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -46,7 +48,7 @@ function Navbar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "oklch(27.9% 0.041 260.031)",
+        backgroundImage: `radial-gradient(at 0% 0%, ${theme.palette.primary.main}10 0, transparent 50%)`,
         boxShadow: "none",
         color: "#fff",
       }}
