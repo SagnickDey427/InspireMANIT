@@ -9,6 +9,14 @@ const mongoose  = require('mongoose');
 const path = require("path");
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
+// Point this to your build folder (usually 'dist' or 'build')
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// Ensure all other routes return the index.html (for SPA routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', '../client/dist/index.html'));
+});
+
 const corsOptions = {
     origin : ["http://localhost:5173"]
 }
