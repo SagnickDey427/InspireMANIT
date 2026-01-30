@@ -4,6 +4,7 @@ const app = express();
 const port = 8080;
 const cors = require('cors');
 const Image = require('./models/Images.js');
+const Member = require('./models/Members.js');
 const mongoose  = require('mongoose');
 const path = require("path");
 require('dotenv').config({ path: path.join(__dirname, '.env') });
@@ -38,30 +39,15 @@ app.get("/gallery",async (req,res)=>{
 })
 
 
-// //Home route
-// app.get("/",(req,res)=>{
-//     res.redirect("/inspire");
-// })
-
-// //Index route
-// app.get("/inspire",(req,res)=>{
-//     res.send("This is the inspire home page.");
-// })
-
-// //Gallery route
-// app.get("/inspire/gallery",(req,res)=>{
-//     res.send("This is gallery!");
-// })
-
-// //Contact route
-// app.get("/inspire/contact",(req,res)=>{
-//     res.send("This is our contact page.");
-// })
-
-// //Members route
-// app.get("/inspire/members",(req,res)=>{
-//     res.send("This is Inspire's hall of fame.");
-// })
+app.get("/members",async (req,res)=>{
+    try{
+        const memberData = await Member.find({});
+        console.log("Found members : ",memberData.length);
+        res.json(memberData);
+    } catch(err){
+        res.status(500).json({error:"Failed to fetch members' data"});
+    }
+})
 
 app.listen(port, ()=>{
     console.log(`App is running on port : ${port}`);

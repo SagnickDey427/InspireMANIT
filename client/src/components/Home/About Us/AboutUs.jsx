@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Typography, Container, Box, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-import AboutUsImg from "../../assets/AboutUsImage.jpg";
+import AboutUsImg from "../../../assets/AboutUsImage.jpg";
 
 export default function AboutSection() {
   const theme = useTheme();

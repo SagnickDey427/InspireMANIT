@@ -1,8 +1,9 @@
 const mongoose  = require('mongoose');
 const imageData = require('./Helper/initData.js');
 const Image = require('./models/Images.js');
+require('dotenv').config();
 
-const dbUrl ="mongodb+srv://paforsagnick129_db_user:jIBqkns0gGFigBwf@cluster0.sykw6lw.mongodb.net/inspire_db?retryWrites=true&w=majority&appName=Cluster0";
+const dbUrl = process.env.ATLASDB_URL;
 
 main().then(()=>{
     console.log("Connected to DB successfully.");

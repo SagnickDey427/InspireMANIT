@@ -69,7 +69,7 @@ export default function ContactUs() {
                 variant="body1"
                 sx={{ color: "rgba(255,255,255,0.6)" }}
               >
-                Or just contact us manually on inspire@manit.in
+                Or just contact us manually on inspiremanit28@gmail.com
               </Typography>
             </motion.div>
           </Grid>

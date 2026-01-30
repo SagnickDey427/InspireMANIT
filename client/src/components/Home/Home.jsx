@@ -1,8 +1,8 @@
 import "./Home.css";
-import HeroSection from "./HeroSection.jsx";
-import AboutSection from "./AboutUs.jsx";
-import UpcomingEvents from "./UpcomingEvent.jsx";
-import Testimonials from "./Testimonial.jsx";
+import HeroSection from "./Hero Section/HeroSection.jsx";
+import AboutSection from "./About Us/AboutUs.jsx";
+import UpcomingEvents from "./Upcoming Events/UpcomingEvent.jsx";
+import Testimonials from "./Testimonials/Testimonial.jsx";
 import MeetTheTeam from "./Meet the Team/MeetTheTeam.jsx";
 
 

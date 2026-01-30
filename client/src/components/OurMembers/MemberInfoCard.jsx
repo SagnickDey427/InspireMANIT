@@ -9,7 +9,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Stack from '@mui/material/Stack';
 
+
 export default function MemberInfoCard({ member }) {
+  
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
@@ -34,7 +36,7 @@ export default function MemberInfoCard({ member }) {
           </Stack>
         </CardContent>
         <CardActions>
-          <Button size="small">
+          <Button size="small" href={member.linkedIn} target="_blank">
             <LinkedInIcon />
           </Button>
           <Button size="small">

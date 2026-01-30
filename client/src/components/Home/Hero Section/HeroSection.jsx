@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import InspireImg from "../../assets/InspireLogo.jpg";
+import InspireImg from "../../../assets/InspireLogo.jpg";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import { useTheme } from "@emotion/react";
