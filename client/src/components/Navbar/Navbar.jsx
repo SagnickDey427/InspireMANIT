@@ -1,3 +1,4 @@
+import './Navbar.css';
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -17,10 +18,11 @@ import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Gallery", path: "/gallery" },
-  { name: "Our Members", path: "/members" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Home", path: "/"},
+  { name: "Gallery", path: "/gallery"},
+  { name: "Our Members", path: "/members"},
+  { name: "Contact Us", path: "/contact"},
+  { name: "Our Alumni", path: "/alumni"},
 ];
 const settings = ["Profile", "Account", "Logout"];
 
@@ -28,6 +30,7 @@ function Navbar() {
   const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -112,13 +115,13 @@ function Navbar() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {navItems.map((page) => (
-                <Link key={page.name} to={`${page.path}`}>
+                <Link key={page.name} to={`${page.path}`} >
                   <Button
                     onClick={handleCloseNavMenu}
                     // CHANGED: color to 'inherit' so it follows the AppBar's black color
-                    sx={{ my: 2, color: "inherit", display: "block" }}
+                    sx={{ my: 2, color: "inherit", display: "block"}}
                   >
-                    {page.name}
+                    <p id="route-name">{page.name}</p>
                   </Button>
                 </Link>
               ))}
@@ -157,9 +160,10 @@ function Navbar() {
                 <Button
                   key={page.name}
                   onClick={handleCloseNavMenu}
+                  
                   sx={{ my: 2, color: "#fff", display: "block" }}
                 >
-                  {page.name}
+                  <p id='route-name'>{page.name}</p>
                 </Button>
               </Link>
             ))}

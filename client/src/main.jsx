@@ -16,6 +16,7 @@ import { CssBaseline } from "@mui/material";
 import theme from './components/Theme/Theme.js';
 import OurMembers from "./components/OurMembers/OurMembers.jsx";
 import ContactUs from "./components/ContactUs/ContactUs.jsx";
+import OurAlumni from "./components/OurAlumni/OurAlumni.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="gallery" element={<Gallery />} />
       <Route path="members" element={<OurMembers />} />
       <Route path="contact" element={<ContactUs />} />
+      <Route path="alumni" element={<OurAlumni />} />
     </Route>,
   ),
 );
