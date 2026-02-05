@@ -44,7 +44,7 @@ const alumniData = [
 
 export default function OurAlumni() {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className=" py-16">
       <Container maxWidth="lg" className="flex flex-col items-center">
         {/* Heading Section */}
         <motion.div

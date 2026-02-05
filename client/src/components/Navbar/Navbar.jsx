@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './Navbar.css';
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
@@ -23,8 +24,9 @@ const navItems = [
   { name: "Our Members", path: "/members"},
   { name: "Contact Us", path: "/contact"},
   { name: "Our Alumni", path: "/alumni"},
+  { name: "Our Branches", path: "/branches"},
 ];
-const settings = ["Profile", "Account", "Logout"];
+
 
 function Navbar() {
   const theme = useTheme();
@@ -167,37 +169,6 @@ function Navbar() {
                 </Button>
               </Link>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>
