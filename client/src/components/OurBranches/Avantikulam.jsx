@@ -1,7 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useMotionTemplate,
+} from "framer-motion";
 import { Typography } from "@mui/material";
+import avantikulamLogo from "../../assets/avantikulamLogo.jpg";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const SpotlightCard = ({ src, alt }) => {
   const mouseX = useMotionValue(0);
@@ -39,21 +47,10 @@ const SpotlightCard = ({ src, alt }) => {
   );
 };
 
-export default function BranchesIntro({imgSrc,imgAlt,smallTitle,title1,title2,desc,isRev=false}) {
-    const style = !isRev ? "md:flex-row" : "md:flex-row-reverse";
+export default function Avantikulam() {
   return (
     <>
-      <section className={`flex flex-col ${style} gap-12 items-center`}>
-        <motion.div
-          className="w-full md:w-1/2"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <SpotlightCard src={imgSrc} alt={imgAlt} />
-        </motion.div>
-
+      <section className={`flex flex-col md:flex-row gap-12 items-center`}>
         <motion.div
           className="w-full md:w-1/2"
           initial={{ opacity: 0, x: 50 }}
@@ -65,17 +62,34 @@ export default function BranchesIntro({imgSrc,imgAlt,smallTitle,title1,title2,de
             variant="overline"
             className="text-cyan-400 tracking-widest font-bold"
           >
-            {smallTitle}
+            Igniting Potential
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: "bold", mb: 2, mt: 1 }}>
-            {title1}<span className="text-cyan-400">{title2}</span>
+            <span className="text-cyan-400">Avanti</span>kulam
           </Typography>
           <Typography
             variant="body1"
             className="text-gray-400 text-lg leading-relaxed"
           >
-            {desc}
+            Avantikulam is a mission-driven project aimed at democratizing elite
+            education. Providing free, high-quality resources for NTSE,
+            Olympiad, and JEE/NEET aspirants from underprivileged backgrounds.
           </Typography>
+          <a href="https://www.youtube.com/@avantikulameducation5825" target="_blank">
+            <button className="bg-red-500 px-20 py-2 mt-4 rounded-2xl text-center"><span className="mr-4"><YouTubeIcon/></span>Our Youtube Channel</button>
+          </a>
+          <a href="https://www.instagram.com/_nitb_avantikulam_/" target="_blank">
+            <button className="bg-pink-500 px-20 py-2 mt-4 rounded-2xl text-center"><span className="mr-4"><InstagramIcon/></span>Our Instagram</button>
+          </a>
+        </motion.div>
+        <motion.div
+          className="w-full md:w-1/2"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <SpotlightCard src={avantikulamLogo} alt="Avantikulam Logo" />
         </motion.div>
       </section>
     </>
