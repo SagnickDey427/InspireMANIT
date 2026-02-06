@@ -5,6 +5,7 @@ const port = 8080;
 const cors = require('cors');
 const Image = require('./models/Images.js');
 const Member = require('./models/Members.js');
+const Alumni = require('./models/Alumnis.js');
 const mongoose  = require('mongoose');
 const path = require("path");
 require('dotenv').config({ path: path.join(__dirname, '.env') });
@@ -52,6 +53,15 @@ app.get("/members",async (req,res)=>{
         const memberData = await Member.find({});
         console.log("Found members : ",memberData.length);
         res.json(memberData);
+    } catch(err){
+        res.status(500).json({error:"Failed to fetch members' data"});
+    }
+})
+app.get("/alumni",async (req,res)=>{
+    try{
+        const alumniData = await Alumni.find({});
+        console.log("Found members : ",alumniData.length);
+        res.json(alumniData);
     } catch(err){
         res.status(500).json({error:"Failed to fetch members' data"});
     }

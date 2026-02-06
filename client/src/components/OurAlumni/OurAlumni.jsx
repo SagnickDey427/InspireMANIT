@@ -2,47 +2,61 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const alumniData = [
-  {
-    id: 1,
-    name: "Rahul Sharma",
-    role: "Software Engineer",
-    company: "Google",
-    year: "Batch of 2020",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-  },
-  {
-    id: 2,
-    name: "Ananya Verma",
-    role: "Product Manager",
-    company: "Microsoft",
-    year: "Batch of 2019",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-  },
-  {
-    id: 3,
-    name: "Aman Gupta",
-    role: "Founder",
-    company: "Startup XYZ",
-    year: "Batch of 2018",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-  },
-  {
-    id: 4,
-    name: "Sneha Patel",
-    role: "Data Scientist",
-    company: "Amazon",
-    year: "Batch of 2021",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-  },
-];
+// const alumniData = [
+//   {
+//     id: 1,
+//     name: "Rahul Sharma",
+//     role: "Software Engineer",
+//     company: "Google",
+//     year: "Batch of 2020",
+//     image: "https://via.placeholder.com/150",
+//     linkedin: "#",
+//   },
+//   {
+//     id: 2,
+//     name: "Ananya Verma",
+//     role: "Product Manager",
+//     company: "Microsoft",
+//     year: "Batch of 2019",
+//     image: "https://via.placeholder.com/150",
+//     linkedin: "#",
+//   },
+//   {
+//     id: 3,
+//     name: "Aman Gupta",
+//     role: "Founder",
+//     company: "Startup XYZ",
+//     year: "Batch of 2018",
+//     image: "https://via.placeholder.com/150",
+//     linkedin: "#",
+//   },
+//   {
+//     id: 4,
+//     name: "Sneha Patel",
+//     role: "Data Scientist",
+//     company: "Amazon",
+//     year: "Batch of 2021",
+//     image: "https://via.placeholder.com/150",
+//     linkedin: "#",
+//   },
+// ];
 
 export default function OurAlumni() {
+  const [alumniData, setAlumniData] = useState([]);
+  useEffect(() => {
+    const getAlumni = async () => {
+      try {
+        const res = await fetch("http://localhost:8080/alumni");
+        const dataJson = await res.json();
+        setAlumniData(dataJson);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getAlumni();
+  }, []);
   return (
     <section className=" py-16">
       <Container maxWidth="lg" className="flex flex-col items-center">
@@ -85,12 +99,15 @@ export default function OurAlumni() {
               />
 
               {/* Info */}
-              <Typography variant="h6" className="mt-4 font-semibold">
+              <Typography variant="h6" className="mt-4 font-semibold text-black">
                 {alumni.name}
               </Typography>
 
               <p className="text-cyan-500 text-sm font-medium">
                 {alumni.role}
+              </p>
+              <p className="text-cyan-500 text-sm font-medium">
+                {alumni.branch}
               </p>
               <p className="text-gray-500 text-sm">
                 {alumni.company}

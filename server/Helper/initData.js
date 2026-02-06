@@ -1,67 +1,115 @@
-const data =[
-    {
-        title:"Orientation 2023",
-        description:"Inspire orientation 2023",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769793814/IMG-20221114-WA0023_detagz.jpg",
-        category:"Cultural"
-    },
-    {
-        title:"Drama : Me and Mind in orientation",
-        description:"'Me and Mind' drama participation in Orientation 2023",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794328/IMG-20221114-WA0019_a4fxtw.jpg",
-        category:"Cultural"
-    },
-    {
-        title:"DYS 2022",
-        description:"Dys session for the first-year students",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794573/20221203_201202_qyh2w0.jpg",
-        category:"Cultural"
-    },
-    {
-        title:"Maffick 2023",
-        description:"Innspire at maffick 2023",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794754/20230304_170353_nrb005.jpg",
-        category:"Cultural"
-    },
-    {
-        title:"Maffick 2023",
-        description:"Innspire at maffick 2023",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794756/IMG20230304170704_erxhap.jpg",
-        category:"Cultural"
-    },
-    {
-        title:"Maffick 2023",
-        description:"Inspire at maffick 2023",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794757/IMG20230304170839_01_wtdaia.jpg",
-        category:"Cultural"
-    },
-    {
-        title:"TechSpurti 2023",
-        description:"Inspire students for a techno-spiritual camp at IIT Kanpur",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769795273/IMG_20230312_113708_pxbtnq.jpg",
-        category:"Technical"
-    },
-    {
-        title:"TechSpurti 2023",
-        description:"Inspire students for a techno-spiritual camp at IIT Kanpur",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769795409/IMG_20230312_111341_wmgf2a.jpg",
-        category:"Technical"
-    },
-    {
-        title:"TechSpurti 2023",
-        description:"In front of CS block of IIT Kanpur",
-        createdAt:Date.now(),
-        url:"https://res.cloudinary.com/dauf7v7uz/image/upload/v1769795468/IMG_20230312_125109_dn0nfm.jpg",
-        category:"Technical"
-    },
-]
+const data = [
+  {
+    title: "Orientation 2023",
+    description: "Inspire orientation 2023",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769793814/IMG-20221114-WA0023_detagz.jpg",
+    category: "Cultural",
+  },
+  {
+    title: "Drama : Me and Mind in orientation",
+    description: "'Me and Mind' drama participation in Orientation 2023",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794328/IMG-20221114-WA0019_a4fxtw.jpg",
+    category: "Cultural",
+  },
+  {
+    title: "DYS 2022",
+    description: "Dys session for the first-year students",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794573/20221203_201202_qyh2w0.jpg",
+    category: "Cultural",
+  },
+  {
+    title: "Maffick 2023",
+    description: "Innspire at maffick 2023",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794754/20230304_170353_nrb005.jpg",
+    category: "Cultural",
+  },
+  {
+    title: "Maffick 2023",
+    description: "Innspire at maffick 2023",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794756/IMG20230304170704_erxhap.jpg",
+    category: "Cultural",
+  },
+  {
+    title: "Maffick 2023",
+    description: "Inspire at maffick 2023",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769794757/IMG20230304170839_01_wtdaia.jpg",
+    category: "Cultural",
+  },
+  {
+    title: "TechSpurti 2023",
+    description: "Inspire students for a techno-spiritual camp at IIT Kanpur",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769795273/IMG_20230312_113708_pxbtnq.jpg",
+    category: "Technical",
+  },
+  {
+    title: "TechSpurti 2023",
+    description: "Inspire students for a techno-spiritual camp at IIT Kanpur",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769795409/IMG_20230312_111341_wmgf2a.jpg",
+    category: "Technical",
+  },
+  {
+    title: "TechSpurti 2023",
+    description: "In front of CS block of IIT Kanpur",
+    createdAt: Date.now(),
+    url: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769795468/IMG_20230312_125109_dn0nfm.jpg",
+    category: "Technical",
+  },
+];
 
-module.exports = {data:data}
+const alumniData = [
+  {
+    name: "Anurag Sharma",
+    role: "SDE",
+    year: "batch of 2025",
+    branch:"CSE",
+    company: "Amazon",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404586/1758282729902_renysy.jpg",
+    linkedin: "https://www.linkedin.com/in/anurag-sharma-4143a4288/",
+  },
+  {
+    name: "Sanskar Kumar",
+    role: "SDE",
+    year: "batch of 2025",
+    branch:"CSE",
+    company: "Amazon",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404124/1768542379311_zqkot8.jpg",
+    linkedin: "https://www.linkedin.com/in/sanskar-kumar-921167247/",
+  },
+  {
+    name: "Alok Pathak",
+    role: "Member of technical stuff",
+    year: "batch of 2025",
+    branch:"ECE",
+    company: "Amazon",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404549/1751172976002_pafyad.jpg",
+    linkedin: "https://www.linkedin.com/in/alok-pathak-9128521bb/",
+  },
+  {
+    name: "Prajjwal Maurya",
+    role: "Graduate Engineer Trainee",
+    year: "batch of 2025",
+    branch:"CIVIL",
+    company: "L&T",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404811/1764083242242_tzsuju.jpg",
+    linkedin: "https://www.linkedin.com/in/prajjwal-maurya-218aba21b/",
+  },
+  {
+    name: "Shishir Mishra",
+    role: "Graduate Engineer Trainee",
+    year: "batch of 2025",
+    branch:"ELECTRICAL",
+    company: "PSU",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404994/1747887154996_vnkfzv.jpg",
+    linkedin: "https://www.linkedin.com/in/shishir-mishra-44ba56187/",
+  },
+];
+
+module.exports = { data: data, alumniData:alumniData };
