@@ -40,8 +40,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:underline">
-                    About
+                  <Link to="/gallery" className="hover:underline">
+                    Gallery
                   </Link>
                 </li>
               </ul>
@@ -53,18 +53,13 @@ export default function Footer() {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/hiteshchoudhary"
+                    href="https://github.com/SagnickDey427/InspireMANIT"
                     className="hover:underline"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Github
                   </a>
-                </li>
-                <li>
-                  <Link to="/" className="hover:underline">
-                    Discord
-                  </Link>
                 </li>
               </ul>
             </div>
@@ -91,7 +86,7 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
             © 2026
-            <a href="https://hiteshchoudhary.com/" className="hover:underline">
+            <a href="/" className="hover:underline">
               inspiremanit
             </a>
             . All Rights Reserved.
