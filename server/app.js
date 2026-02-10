@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 // });
 
 const corsOptions = {
-    origin : ["http://localhost:5173"]
+    origin : ["http://localhost:5173","inspiremanit-production.up.railway.app"]
 }
 
 app.use(cors(corsOptions));
