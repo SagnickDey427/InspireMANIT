@@ -66,50 +66,14 @@ const data = [
 
 const alumniData = [
   {
-    name: "Anurag Sharma",
-    role: "SDE",
-    year: "batch of 2025",
-    branch:"CSE",
-    company: "Amazon",
-    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404586/1758282729902_renysy.jpg",
-    linkedin: "https://www.linkedin.com/in/anurag-sharma-4143a4288/",
-  },
-  {
-    name: "Sanskar Kumar",
-    role: "SDE",
-    year: "batch of 2025",
-    branch:"CSE",
-    company: "Amazon",
-    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404124/1768542379311_zqkot8.jpg",
-    linkedin: "https://www.linkedin.com/in/sanskar-kumar-921167247/",
-  },
-  {
-    name: "Alok Pathak",
-    role: "Member of technical stuff",
-    year: "batch of 2025",
-    branch:"ECE",
-    company: "Amazon",
-    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404549/1751172976002_pafyad.jpg",
-    linkedin: "https://www.linkedin.com/in/alok-pathak-9128521bb/",
-  },
-  {
-    name: "Prajjwal Maurya",
-    role: "Graduate Engineer Trainee",
-    year: "batch of 2025",
-    branch:"CIVIL",
-    company: "L&T",
-    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404811/1764083242242_tzsuju.jpg",
-    linkedin: "https://www.linkedin.com/in/prajjwal-maurya-218aba21b/",
-  },
-  {
-    name: "Shishir Mishra",
-    role: "Graduate Engineer Trainee",
-    year: "batch of 2025",
+    name: "Harsh Lodhi",
+    role: "SDE 1",
+    year: "batch of 2024",
     branch:"ELECTRICAL",
-    company: "PSU",
-    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404994/1747887154996_vnkfzv.jpg",
-    linkedin: "https://www.linkedin.com/in/shishir-mishra-44ba56187/",
-  },
+    company: "Qubits",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770452861/1768329126791_h8cimj.jpg",
+    linkedin: "https://www.linkedin.com/in/harshlodhi08/",
+  }
 ];
 
 module.exports = { data: data, alumniData:alumniData };

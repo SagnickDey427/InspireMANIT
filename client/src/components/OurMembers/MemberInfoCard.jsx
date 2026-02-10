@@ -39,9 +39,9 @@ export default function MemberInfoCard({ member }) {
           <Button size="small" href={member.linkedIn} target="_blank">
             <LinkedInIcon />
           </Button>
-          <Button size="small">
+          {/* <Button size="small">
             <InstagramIcon />
-          </Button>
+          </Button> */}
         </CardActions>
       </Card>
     </>
