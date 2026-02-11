@@ -4,28 +4,25 @@ import TeamMemberCard from './TeamMemberCard';
 
 const TEAM_DATA = [
   {
-    name: "Aman Srivastava",
-    role: "President",
-    image: "https://i.pravatar.cc/150?u=aman", // Replace with real photos
-    linkedin: "#",
-    github: "#",
-    instagram: "#"
+    name: "Sagnick Dey",
+    role: "Executive",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769764933/WhatsApp_Image_2026-01-30_at_14.50.51_jimen1.jpg", 
+    linkedin: "https://www.linkedin.com/in/sagnick-dey-712017334/",
+    github: "https://github.com/SagnickDey427"
   },
   {
-    name: "Sneha Kapoor",
-    role: "Technical Lead",
-    image: "https://i.pravatar.cc/150?u=sneha",
-    linkedin: "#",
-    github: "#",
-    instagram: "#"
+    name: "Divyanshu Shukla",
+    role: "Graphic Designer",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770262044/Divyanshu_img_gywj9m.jpg",
+    linkedin: "https://www.linkedin.com/in/kumar-divyanshu-shuka-81b08131b/",
+    github: "#"
   },
   {
-    name: "Vikram Meena",
-    role: "Event Coordinator",
-    image: "https://i.pravatar.cc/150?u=vikram",
-    linkedin: "#",
-    github: "#",
-    instagram: "#"
+    name: "Sagnick Dey",
+    role: "Executive",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769764933/WhatsApp_Image_2026-01-30_at_14.50.51_jimen1.jpg", 
+    linkedin: "https://www.linkedin.com/in/sagnick-dey-712017334/",
+    github: "https://github.com/SagnickDey427"
   }
 ];
 

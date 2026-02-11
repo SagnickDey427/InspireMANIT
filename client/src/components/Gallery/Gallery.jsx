@@ -11,27 +11,14 @@ export default function Gallery() {
   const [imageData, setImageData] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch("https://inspiremanit-production-8ec6.up.railway.app/");
-      // const data = await fetch("http://localhost:8080/gallery");
+      const data = await fetch("http://localhost:8080/gallery");
       const jsonData = await data.json();
       setImageData(jsonData);
     };
     getData();
   }, []);
   const theme = useTheme();
-
-  // This returns true if the screen is smaller than 600px (MUI's 'sm' breakpoint)
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  // const [itemData,setItemData] = useState([]);
-  // useEffect(()=>{
-  //     const fetchData = async ()=>{
-
-  //         const imageData = await fetch("/gallery")
-  //         const imageDataJson = await imageData.json();
-  //         setItemData(imageDataJson);
-  //     }
-  //     fetchData();
-  // },[]);
   return (
     <Container maxWidth="lg" sx={{ mt: 8, mb: 8 }}>
       <Typography

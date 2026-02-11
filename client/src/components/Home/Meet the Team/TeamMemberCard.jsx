@@ -2,9 +2,8 @@ import React from 'react';
 import { Box, Typography, Avatar, IconButton, Stack } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
-const TeamMemberCard = ({ name, role, image, linkedin, github, instagram }) => {
+const TeamMemberCard = ({ name, role, image, linkedin, github }) => {
   return (
     <Box sx={{ 
       textAlign: 'center', 
@@ -35,11 +34,9 @@ const TeamMemberCard = ({ name, role, image, linkedin, github, instagram }) => {
         <IconButton size="small" component="a" href={linkedin} target="_blank" sx={{ color: '#0077b5' }}>
           <LinkedInIcon fontSize="small" />
         </IconButton>
+        
         <IconButton size="small" component="a" href={github} target="_blank" sx={{ color: '#333' }}>
           <GitHubIcon fontSize="small" />
-        </IconButton>
-        <IconButton size="small" component="a" href={instagram} target="_blank" sx={{ color: '#e4405f' }}>
-          <InstagramIcon fontSize="small" />
         </IconButton>
       </Stack>
     </Box>

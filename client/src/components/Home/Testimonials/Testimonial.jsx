@@ -14,7 +14,7 @@ const TESTIMONIALS_DATA = [
   {
     name: "Divyanshu Shukla",
     role: "Graphic Designer",
-    feedback: "Working with team inspire has really supported me throughout the entire college journey.",
+    feedback: "Inspire is a society where reality and personal growth converge, fostering holistic development that transcends boundaries",
     image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770262044/Divyanshu_img_gywj9m.jpg",
     
   },
