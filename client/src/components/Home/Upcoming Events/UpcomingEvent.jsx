@@ -2,12 +2,13 @@ import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import EventCard from './EventCard'; // Importing your modular component
 import { useTheme } from "@emotion/react";
+import iksSphereImg from '../../../assets/iksSphere.jpeg';
 
 const UPCOMING_DATA = [
   {
-    title: "IKS Cultural Debate",
+    title: "IKS Sphere",
     date: "Feb 20, 2026",
-    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205",
+    image: iksSphereImg,
     description: "Exploring the depths of Indian Knowledge Systems in modern education at MANIT.",
     redirectUrl:"https://docs.google.com/forms/d/e/1FAIpQLSeZDqfEjuyRw6dRPTt_0Co4MuA9eTHxrzNGI32wNCZybW_xlA/viewform"
   }
