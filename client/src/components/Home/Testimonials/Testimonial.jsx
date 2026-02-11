@@ -5,24 +5,24 @@ import { useTheme } from "@emotion/react";
 
 const TESTIMONIALS_DATA = [
   {
-    name: "Aditi Sharma",
-    role: "Core Member, IKS",
-    feedback: "Being part of the Indian Knowledge System event at MANIT changed my perspective on our heritage. The society provides a great platform for growth.",
-    image: "https://i.pravatar.cc/150?u=aditi",
+    name: "Sagnick Dey",
+    role: "Executive",
+    feedback: "The only society in college that provide some real conncetion and supports life growth",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1769764933/WhatsApp_Image_2026-01-30_at_14.50.51_jimen1.jpg",
     
   },
   {
-    name: "Rahul Verma",
-    role: "Web Lead",
-    feedback: "Working on the WanderLust project was my first real experience with the MERN stack. The mentorship here is top-notch.",
-    image: "https://i.pravatar.cc/150?u=rahul",
+    name: "Divyanshu Shukla",
+    role: "Graphic Designer",
+    feedback: "Working with team inspire has really supported me throughout the entire college journey.",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770262044/Divyanshu_img_gywj9m.jpg",
     
   },
   {
-    name: "Ishaan Gupta",
+    name: "Anurag Sharma",
     role: "Alumni",
     feedback: "The networking opportunities I got through this society helped me land my first internship. Truly a community that builds leaders.",
-    image: "https://i.pravatar.cc/150?u=ishaan",
+    image: "https://res.cloudinary.com/dauf7v7uz/image/upload/v1770404586/1758282729902_renysy.jpg",
   }
 ];
 

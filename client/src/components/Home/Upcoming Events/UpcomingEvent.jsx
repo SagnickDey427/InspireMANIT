@@ -6,15 +6,10 @@ import { useTheme } from "@emotion/react";
 const UPCOMING_DATA = [
   {
     title: "IKS Cultural Debate",
-    date: "Feb 15, 2026",
+    date: "Feb 20, 2026",
     image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205",
     description: "Exploring the depths of Indian Knowledge Systems in modern education at MANIT.",
-  },
-  {
-    title: "Tech-Srijan Hackathon",
-    date: "March 02, 2026",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
-    description: "A 24-hour sprint to build solutions for sustainable living and smart cities.",
+    redirectUrl:"https://docs.google.com/forms/d/e/1FAIpQLSeZDqfEjuyRw6dRPTt_0Co4MuA9eTHxrzNGI32wNCZybW_xlA/viewform"
   }
 ];
 
@@ -47,6 +42,7 @@ const UpcomingEvents = () => {
                 date={event.date}
                 image={event.image}
                 description={event.description}
+                redirectUrl={event.redirectUrl}
               />
             </Grid>
           ))}

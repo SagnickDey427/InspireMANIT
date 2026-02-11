@@ -11,7 +11,7 @@ import {
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 // This is a "presentational" component - it only cares about HOW the card looks
-const EventCard = ({ title, date, image, description }) => {
+const EventCard = ({ title, date, image, description, redirectUrl }) => {
   return (
     <Card
       sx={{
@@ -46,9 +46,11 @@ const EventCard = ({ title, date, image, description }) => {
         </Typography>
       </CardContent>
       <Box sx={{ p: 2, pt: 0 }}>
-        <Button variant="contained" fullWidth sx={{ borderRadius: 2 }}>
-          Register Now
-        </Button>
+        <a href={redirectUrl} target="_blank">
+          <Button variant="contained" fullWidth sx={{ borderRadius: 2 }}>
+            Register Now
+          </Button>
+        </a>
       </Box>
     </Card>
   );
