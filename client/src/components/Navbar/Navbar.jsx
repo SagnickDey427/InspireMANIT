@@ -25,6 +25,7 @@ const navItems = [
   { name: "Contact Us", path: "/contact"},
   { name: "Our Alumni", path: "/alumni"},
   { name: "Our Branches", path: "/branches"},
+  { name: "Our Events", path: "/events"},
 ];
 
 

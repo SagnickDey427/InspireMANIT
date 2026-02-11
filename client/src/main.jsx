@@ -18,6 +18,7 @@ import OurMembers from "./components/OurMembers/OurMembers.jsx";
 import ContactUs from "./components/ContactUs/ContactUs.jsx";
 import OurAlumni from "./components/OurAlumni/OurAlumni.jsx";
 import OurBranches from "./components/OurBranches/OurBranches.jsx";
+import EventsContainer from "./components/OurEvents/OurEvents.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="contact" element={<ContactUs />} />
       <Route path="alumni" element={<OurAlumni />} />
       <Route path="branches" element={<OurBranches />} />
+      <Route path="events" element={<EventsContainer />} />
     </Route>,
   ),
 );
