@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 // });
 
 const corsOptions = {
-    origin : ["http://localhost:5173"]
+    origin : process.env.FRONTEND_URL    //"http://localhost:5173"
 }
 
 app.use(cors(corsOptions));

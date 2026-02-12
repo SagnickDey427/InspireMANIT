@@ -48,7 +48,7 @@ export default function OurAlumni() {
   useEffect(() => {
     const getAlumni = async () => {
       try {
-        const res = await fetch("http://localhost:8080/alumni");
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/alumni`); //http://localhost:8080/alumni
         const dataJson = await res.json();
         setAlumniData(dataJson);
       } catch (err) {

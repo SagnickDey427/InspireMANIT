@@ -8,7 +8,7 @@ export default function OurMembers() {
   useEffect(() => {
     const getMembers = async () => {
       try {
-        const res = await fetch("http://localhost:8080/members");
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/members`);
         const dataJson = await res.json();
         setMembersData(dataJson);
       } catch (err) {
