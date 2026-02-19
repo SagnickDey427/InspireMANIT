@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 const corsOptions = {
     origin: [
         "http://localhost:5173", 
-        "https://inspiremanit-production.up.railway.app" // Add your production URL
+        "https://inspiremanit-production.up.railway.app/" // Add your production URL
     ],
     credentials: true
 };
