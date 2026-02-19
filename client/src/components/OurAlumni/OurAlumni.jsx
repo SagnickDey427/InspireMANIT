@@ -4,55 +4,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-// const alumniData = [
-//   {
-//     id: 1,
-//     name: "Rahul Sharma",
-//     role: "Software Engineer",
-//     company: "Google",
-//     year: "Batch of 2020",
-//     image: "https://via.placeholder.com/150",
-//     linkedin: "#",
-//   },
-//   {
-//     id: 2,
-//     name: "Ananya Verma",
-//     role: "Product Manager",
-//     company: "Microsoft",
-//     year: "Batch of 2019",
-//     image: "https://via.placeholder.com/150",
-//     linkedin: "#",
-//   },
-//   {
-//     id: 3,
-//     name: "Aman Gupta",
-//     role: "Founder",
-//     company: "Startup XYZ",
-//     year: "Batch of 2018",
-//     image: "https://via.placeholder.com/150",
-//     linkedin: "#",
-//   },
-//   {
-//     id: 4,
-//     name: "Sneha Patel",
-//     role: "Data Scientist",
-//     company: "Amazon",
-//     year: "Batch of 2021",
-//     image: "https://via.placeholder.com/150",
-//     linkedin: "#",
-//   },
-// ];
-
 export default function OurAlumni() {
   const [alumniData, setAlumniData] = useState([]);
   useEffect(() => {
     const getAlumni = async () => {
       try {
-        const res = await fetch(`http://localhost:8080/alumni`); //http://localhost:8080/alumni
+        // Updated to your production backend URL
+        const res = await fetch(`https://inspiremanit-production-8ec6.up.railway.app/alumni`); 
+        
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
         const dataJson = await res.json();
         setAlumniData(dataJson);
       } catch (err) {
-        console.log(err);
+        console.error("Error fetching alumni:", err);
       }
     };
     getAlumni();

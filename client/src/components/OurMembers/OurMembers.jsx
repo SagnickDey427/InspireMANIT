@@ -6,17 +6,24 @@ import { useEffect, useState } from "react";
 export default function OurMembers() {
   const [membersData, setMembersData] = useState([]);
   useEffect(() => {
-    const getMembers = async () => {
-      try {
-        const res = await fetch(`http://localhost:8080/members`);
-        const dataJson = await res.json();
-        setMembersData(dataJson);
-      } catch (err) {
-        console.log(err);
+  const getMembers = async () => {
+    try {
+      // Direct production link for testing
+      const res = await fetch(`https://inspiremanit-production-8ec6.up.railway.app/members`);
+      
+      if (!res.ok) {
+        throw new Error(`Server responded with status: ${res.status}`);
       }
-    };
-    getMembers();
-  }, []);
+
+      const dataJson = await res.json();
+      setMembersData(dataJson);
+    } catch (err) {
+      console.error("Failed to fetch members:", err);
+    }
+  };
+
+  getMembers();
+}, []);
   return (
     <Container sx={{ py: 8 }}>
       <Typography

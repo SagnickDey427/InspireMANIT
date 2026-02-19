@@ -11,16 +11,23 @@ export default function Gallery() {
   const [imageData, setImageData] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch(`http://localhost:8080/gallery`);  //http://localhost:8080/gallery
-      const jsonData = await data.json();
-      setImageData(jsonData);
+      try {
+        // Use the environment variable, or fallback to localhost for development
+        const API_BASE =
+          import.meta.env.VITE_API_URL || "http://localhost:8080";
+
+        const response = await fetch(`${API_BASE}/gallery`);
+
+        if (!response.ok) throw new Error("Network response was not ok");
+
+        const jsonData = await response.json();
+        setImageData(jsonData);
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
     };
-    try {
-      getData();
-    } catch (error) {
-      console.log(error);
-    }
-    
+
+    getData();
   }, []);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));

@@ -13,7 +13,11 @@ require("dotenv").config({ path: path.join(__dirname, ".env") });
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 const corsOptions = {
-  origin: "http://localhost:5173", //"http://localhost:5173"
+    origin: [
+        "http://localhost:5173", 
+        "https://inspiremanit-production.up.railway.app" // Add your production URL
+    ],
+    credentials: true
 };
 
 app.use(cors(corsOptions));
