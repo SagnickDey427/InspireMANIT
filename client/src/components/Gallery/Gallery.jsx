@@ -11,11 +11,16 @@ export default function Gallery() {
   const [imageData, setImageData] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch(`${import.meta.env.VITE_API_URL}/gallery`);  //http://localhost:8080/gallery
+      const data = await fetch(`http://localhost:8080/gallery`);  //http://localhost:8080/gallery
       const jsonData = await data.json();
       setImageData(jsonData);
     };
-    getData();
+    try {
+      getData();
+    } catch (error) {
+      console.log(error);
+    }
+    
   }, []);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));

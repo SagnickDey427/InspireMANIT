@@ -5,19 +5,19 @@ export const upcomingEvents= [
 
     {
         title:"IKS Sphere",
-        date:"20 Jan,2026",
+        date:"25 Feb,2026",
         description:"The official IKS event (organised by govt. of india) consisting of debate, ideathon and much more. registration form : https://docs.google.com/forms/d/e/1FAIpQLSeZDqfEjuyRw6dRPTt_0Co4MuA9eTHxrzNGI32wNCZybW_xlA/viewform",
         imageUrl:iksSphereImg
     },
     {
         title:"IKS Debate",
-        date:"20 Jan,2026",
+        date:"25 Feb,2026",
         description:"This is a debate based on Indian Knowledge System. registration form : https://docs.google.com/forms/d/e/1FAIpQLSeZDqfEjuyRw6dRPTt_0Co4MuA9eTHxrzNGI32wNCZybW_xlA/viewform",
         imageUrl:iksSphereImg
     },
     {
         title:"IKS Ideathon",
-        date:"20 Jan,2026",
+        date:"25 Feb,2026",
         description:"This is an ideathon contest based on Indian Knowledge System. registration form : https://docs.google.com/forms/d/e/1FAIpQLSeZDqfEjuyRw6dRPTt_0Co4MuA9eTHxrzNGI32wNCZybW_xlA/viewform",
         imageUrl:iksSphereImg
     },
