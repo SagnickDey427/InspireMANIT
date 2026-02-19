@@ -19,7 +19,9 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 // });
 
 const corsOptions = {
-    origin : ["faithful-presence-production.up.railway.app"]
+    origin : ["https://www.inspiremanit.in","https://faithful-presence-production.up.railway.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
 }
 
 app.use(cors(corsOptions));
